@@ -24,7 +24,7 @@
 }
 :root {
   --neutral-100: hsl(0, 0%, 100%);
-  --accent-300: hsl(8, 62%, 75%);
+  --accent-300: hsl(8, 75%, 60%);
   --accent-400: hsl(8, 62%, 55%);
   --accent-500: hsl(8, 62%, 35%);
   --primary-100: hsl(33, 24%, 92%);
@@ -50,6 +50,19 @@
     --fs-400: 1rem;
   }
 }
+@media (prefers-color-scheme: dark) {
+  :root {
+    --neutral-100: hsl(0, 0%, 100%);
+    --accent-400: hsl(8, 62%, 55%);
+    --accent-500: hsl(8, 62%, 35%);
+    --primary-100: hsl(18, 23%, 10%);
+    --primary-200: hsl(20, 23%, 23%);
+    --primary-300: hsl(22, 31%, 44%);
+    --primary-400: hsl(33, 23%, 69%);
+    --primary-700: hsl(33, 25%, 88%);
+    --primary-800: hsl(33, 24%, 92%);
+  }
+}
 
 *,
 *::before,
@@ -66,9 +79,111 @@
 body {
   font-family: "Source Sans 3", sans-serif;
   font-weight: 400;
-  font-size: 1rem;
-  color: var(--accent-500);
+  font-size: var(--fs-400);
+  color: var(--neutral-100);
+  background-color: var(--primary-100);
   line-height: 1.5;
+}
+
+a {
+  color: var(--accent-400);
+}
+a:is(:hover, :focus) {
+  color: var(--accent-500);
+}
+
+.button {
+  display: inline-flex;
+  cursor: pointer;
+  text-decoration: none;
+  line-height: 1;
+  font-family: "Source Sans 3", sans-serif;
+  font-size: "Source Sans 3", sans-serif;
+  text-transform: none;
+  border: 0;
+  font-weight: 700;
+  padding-block: 0.75em;
+  padding-inline: 2em;
+  border-radius: 0.5rem;
+  transition: 275ms ease;
+}
+.button[data-type=accent] {
+  background-color: var(--accent-400);
+  color: var(--neutral-100);
+}
+.button[data-type=accent]:is(:hover, :focus) {
+  background-color: var(--accent-500);
+  color: var(--neutral-100);
+}
+.button[data-type=primary] {
+  background-color: var(--primary-700);
+  color: var(--neutral-100);
+}
+.button[data-type=primary]:is(:hover, :focus) {
+  background-color: var(--primary-800);
+  color: var(--neutral-100);
+}
+
+.card {
+  display: grid;
+  gap: 0.5rem;
+  padding: 2rem;
+  background-color: var(--primary-100);
+  font-family: "Source Sans 3", sans-serif;
+  color: var(--primary-100);
+  line-height: 1.25;
+  border-radius: 1rem;
+  box-shadow: 0 0.25rem 1rem rgba(0, 0, 0, 0.05);
+}
+.card__heading {
+  font-size: var(--fs-600);
+  color: var(--primary-100);
+  font-family: "Alegreya SC", serif;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.logo {
+  max-inline-size: 15rem;
+}
+.site-header .logo {
+  fill: var(--primary-300);
+  inline-size: 15rem;
+}
+.site-footer .logo {
+  fill: var(--accent-400);
+  inline-size: 15rem;
+}
+
+.site-header {
+  background-color: var(--primary-800);
+  color: var(--neutral-100);
+  padding-block: 2rem;
+}
+.site-header__layout {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+}
+
+.nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3rem;
+  list-style: none;
+}
+.nav a {
+  color: var(--neutral-100);
+  font-family: "Alegreya SC", serif;
+  font-size: var(--fs-600);
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-decoration: none;
+}
+.nav a:is(:hover, :active) {
+  color: var(--accent-300);
 }
 
 .clr-neutral-100 {
@@ -80,11 +195,11 @@ body {
 }
 
 .clr-accent-300 {
-  color: hsl(8, 62%, 75%);
+  color: hsl(8, 75%, 60%);
 }
 
 .bg-accent-300 {
-  background-color: hsl(8, 62%, 75%);
+  background-color: hsl(8, 75%, 60%);
 }
 
 .clr-accent-400 {
@@ -173,6 +288,14 @@ body {
 
 .fs-400 {
   font-size: var(--fs-400);
+}
+
+.section {
+  padding-block: clamp(5rem, 10vh, 6rem);
+}
+
+.mx-auto {
+  margin-inline: auto;
 }
 
 .margin-1 {
@@ -836,8 +959,19 @@ body {
 }
 
 .container {
-  width: min(100% - 2rem, 60rem);
+  --padding: 2rem;
+  --max-width: 64rem;
+  inline-size: min(100% - var(--padding), var(--max-width));
   margin-inline: auto;
+}
+.container[data-type=narrow] {
+  --max-width: 40rem;
+}
+.container[data-type=wide] {
+  --max-width: 75rem;
+}
+.container[data-type=full-bleed] {
+  --max-width: 100%;
 }
 
 .fw-regular {
@@ -854,6 +988,14 @@ body {
 
 .ff-accent {
   font-family: "Alegreya SC", serif;
+}
+
+.box-shadow-1 {
+  box-shadow: 0 0.25rem 1rem rgba(0, 0, 0, 0.05);
+}
+
+.box-shadow-2 {
+  box-shadow: 0 0.25rem 1rem rgba(0, 0, 0, 0.15);
 }
 
 /*# sourceMappingURL=main.css.map */

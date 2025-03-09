@@ -1,0 +1,24 @@
+@use "../abstracts" as *;
+
+
+.nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: $navigation-spacing;
+    list-style: none;
+    
+    
+    a {
+        color: $navigation-color;
+        font-family: $navigation-font-family;
+        font-size: $navigation-font-size;
+        font-weight: $navigation-font-weight;
+        letter-spacing: $navigation-letter-spacing;
+        text-decoration: none;
+
+        &:is(:hover, :active) {
+            color: $navigation-color-active;
+        }
+    }
+
+}

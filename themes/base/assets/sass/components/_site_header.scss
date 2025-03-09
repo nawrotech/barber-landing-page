@@ -1,0 +1,13 @@
+@use "../abstracts" as *;
+
+.site-header {
+    background-color: $site-header-background-color;
+    color: $site-header-color;
+    padding-block: $site-header-padding-block;
+
+    &__layout {
+        display: flex;
+        justify-content: $site-header-justification;
+        align-items: $site-header-alignement;
+    }
+}

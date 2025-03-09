@@ -1,0 +1,17 @@
+@use "../abstracts" as *;
+
+.logo {
+    max-inline-size: 15rem;
+
+    .site-header & {
+        fill: $logo-fill-header;
+        inline-size: $logo-size-header;
+    }
+
+    .site-footer & {
+       fill: $logo-fill-footer;
+       inline-size: $logo-size-footer;
+    }
+
+  
+} 
