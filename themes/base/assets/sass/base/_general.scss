@@ -3,7 +3,8 @@
 body {
     font-family: $font-family-base;
     font-weight: $font-weight-default;
-    // font-size: fs(400);
-    color: $color-neutral-100;
+    font-size: $size-4;
+    color: $color-accent-500;
     line-height: 1.5;
 }
+
