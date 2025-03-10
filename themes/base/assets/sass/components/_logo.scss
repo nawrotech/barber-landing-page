@@ -1,7 +1,7 @@
 @use "../abstracts" as *;
 
 .logo {
-    max-inline-size: 15rem;
+    max-inline-size: $logo-size-default;
 
     .site-header & {
         fill: $logo-fill-header;

@@ -47,13 +47,11 @@ $heading-line-height: 1;
 
 // logo
 $logo-fill-default: $color-primary-400;
-$logo-fill-header: $color-primary-300;
-$logo-fill-footer: $color-accent-400;
 $logo-size-default: 15rem;
-$logo-size-header: $logo-size-default;
-$logo-size-footer: $logo-size-default;
 
 // site header
+$logo-fill-header: $color-primary-300;
+$logo-size-header: $logo-size-default;
 $site-header-background-color: $color-primary-800;
 $site-header-color: $color-neutral-100;
 $site-header-padding-block: $size-8;
@@ -61,6 +59,7 @@ $site-header-margin: 0;
 $site-header-small-screen-justification: center;
 $site-header-medium-screen-justification: space-between;
 $site-header-alignement: start;
+
 
 // nav
 $navigation-color: $color-neutral-100;
@@ -102,7 +101,8 @@ $site-footer-logo-fill: $color-primary-400;
 $site-footer-alignement: center;
 $site-footer-spacing: $size-4;
 $site-footer-padding-block: $size-8;
-
+$logo-fill-footer: $color-accent-400;
+$logo-size-footer: $logo-size-default;
 
 // buttons
 $button-font-family: $body-font-family;

@@ -21,12 +21,25 @@
       }
     }
 
-    @media (prefers-color-scheme: dark) {
-      @each $color, $shade-map in $dark { 
+    body:has(.dark-mode-switcher__checkbox:checked) {
+      @each $color, $shade-map in $dark {
         @each $shade, $value in $shade-map {
           --#{$color}-#{$shade}: #{$value};
         }
       }
     }
-
+    
+    body:has(.dark-mode-switcher__checkbox:not(:checked)) {
+      @each $color, $shade-map in $light {
+        @each $shade, $value in $shade-map {
+          --#{$color}-#{$shade}: #{$value};
+        }
+      }
+    }
+    
+ 
 }
+
+
+
+

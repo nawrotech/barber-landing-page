@@ -22,16 +22,16 @@
         flex-flow: row wrap;
         justify-content: center;
         row-gap: 2rem;
-
-        @include mq(large) {
-            justify-content: space-between;
-        }
+        
     }
 
     li {
-        padding-inline: 1.5rem;
+        padding-inline: 2rem;
         display: grid;
         gap: $hours-scheduled-day-spacing;
+  
+
+
     }
 
 }
