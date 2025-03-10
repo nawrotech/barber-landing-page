@@ -1,0 +1,50 @@
+@use "../abstracts" as *;
+
+.hero {
+    --flow-space: #{$hero-flow-space};
+    text-align: center;
+    font-size: $hero-font-size;
+    color: $hero-color;
+    @include mq(large) {
+        text-align: left;
+    }
+
+    .wrapper {
+        display: flex;
+        flex-flow: row wrap;
+        align-items: $hero-alignement;
+        justify-content: $hero-small-screen-justification;  
+        gap: $hero-flow-space;
+
+        & > :first-child {
+            max-inline-size: 60ch;
+        }
+
+        @include mq(large) {
+            justify-content: $hero-large-screen-justification;  
+        }
+    }
+
+    .buttons-wrapper {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        gap: 1.5rem;
+        @include mq(large) {
+            justify-content: left;
+        }
+    }
+
+    h1 {
+        font-size: $hero-heading-font-size;
+    }
+
+
+    img {
+        inline-size: 100%;
+        object-fit: cover;
+        border-radius: $hero-border-radius;
+        box-shadow: $hero-box-shadow;
+    }
+
+}

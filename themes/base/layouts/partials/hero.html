@@ -1,0 +1,22 @@
+<section class="hero section">
+    <div class="container">
+
+        <div class="wrapper">
+            <div class="flow">
+                <h1 class="heading-1">The barber shop</h1>
+                <p>Established over a decade ago, <strong>The Barber Shop</strong> is here to serve you're hair needs, whatever they are. From a simple cut, a beard trim or a hot towel shave, we're here to help you with.</p>
+                <div class="buttons-wrapper">
+                    <a href="#appointment" class="button" data-type="accent">Book appointment</a>
+                    <a href="#prices" class="button" data-type="primary">View prices</a>
+                </div>
+            </div>
+           
+            {{ partial "image.html" (dict 
+            "resourceSrc" (resources.Get "images/hair-cut.jpg")
+            "altText" "Barber cutting his client's hair with precision"
+            ) }}
+         
+        </div>
+ 
+    </div>
+</section>

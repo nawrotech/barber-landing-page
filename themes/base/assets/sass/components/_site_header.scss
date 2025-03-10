@@ -7,7 +7,13 @@
 
     &__layout {
         display: flex;
-        justify-content: $site-header-justification;
+        flex-flow: row wrap;
+        justify-content: $site-header-small-screen-justification;
         align-items: $site-header-alignement;
+
+        @include mq(medium) {
+            justify-content: $site-header-medium-screen-justification;
+        }
+
     }
 }

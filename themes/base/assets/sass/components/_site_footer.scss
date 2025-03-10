@@ -1,0 +1,13 @@
+@use "../abstracts" as *;
+
+.site-footer {
+    --flow-space: #{$site-footer-spacing};
+    
+    background-color: $site-footer-background-color;
+    color: $site-footer-color;
+    text-align: $site-footer-alignement;
+    padding-block: $site-footer-padding-block;
+
+    
+
+}

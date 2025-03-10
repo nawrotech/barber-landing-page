@@ -87,38 +87,15 @@ $container-max-width: 64rem;
 $container-max-width-narrow: 40rem;
 $container-max-width-wide: 75rem;
 
-// // site header
-// $site-header-background-color: $color-primary-300;
-// $site-header-color: $color-neutral-100;
-// $site-header-padding: $size-8 0;
-// $site-header-margin: 0;
-// $site-header-jusitifcation-small-screens: center;
-// $site-header-jusitifcation-large-screens: space-between;
-// $site-header-alignment: center;
-
-// //navigation
-// $navigation-color: $site-header-color;
-// $navigation-color-hover: $color-primary-300;
-// $navigation-font-size: $font-size-400;
-// $navigation-gap: $size-9;
-// $navigation-link-text-decoration: none;
-// $navigation-font-family: $body-font-family;
-// $navigation-font-weight: $body-font-weight;
-
-// // site footer
-// $footer-background-color: $color-primary-300;
-// $footer-text-color: $color-primary-900;
-// $footer-link-color: $color-neutral-100;
-// $footer-link-color-hover: $color-primary-300;
-// $footer-link-font-family: $font-family-accent;
-// $footer-link-text-decoration: none;
 
 // site header
 $site-header-background-color: $color-primary-800;
 $site-header-color: $color-neutral-100;
 $site-header-padding-block: $size-8;
 $site-header-margin: 0;
-$site-header-justification: space-between;
+$site-header-small-screen-justification: center;
+$site-header-medium-screen-justification: space-between;
+
 $site-header-alignement: start;
 
 // nav
@@ -129,6 +106,24 @@ $navigation-font-family: $font-family-accent;
 $navigation-font-weight: $font-weight-bold;
 $navigation-spacing: $size-10;
 $navigation-letter-spacing: $letter-spacing-loose;
+
+
+// // site footer
+// $footer-background-color: $color-primary-300;
+// $footer-text-color: $color-primary-900;
+// $footer-link-color: $color-neutral-100;
+// $footer-link-color-hover: $color-primary-300;
+// $footer-link-font-family: $font-family-accent;
+// $footer-link-text-decoration: none;
+
+
+
+$site-footer-background-color: $color-primary-800;
+$site-footer-color: $color-primary-400;
+$site-footer-logo-fill: $color-primary-400;
+$site-footer-alignement: center;
+$site-footer-spacing: $size-4;
+$site-footer-padding-block: $size-8;
 
 
 // buttons
@@ -166,6 +161,22 @@ $card-heading-font-weight: $font-weight-bold;
 $card-heading-letter-spacing: $letter-spacing-loose;
 $card-heading-line-height: 1;
 $card-heading-text-transform: uppercase;
+
+
+// hero
+$hero-heading-font-size: $font-size-900;
+$hero-background-color: $color-background-default;
+$hero-color: $color-primary-800;
+$hero-font-size: $font-size-500;
+$hero-padding-block: $size-8;
+$hero-flow-space: $size-8;
+$hero-border-radius: $border-radius-2;
+$hero-box-shadow: $box-shadow-2;
+$hero-alignement: center;
+$hero-gap: $size-8;
+$hero-small-screen-justification: center;
+$hero-large-screen-justification: space-between;
+
 
 // // forms
 // $form-label-color: $body-text-color;
