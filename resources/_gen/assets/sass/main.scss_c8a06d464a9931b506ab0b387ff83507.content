@@ -355,7 +355,6 @@ a:is(:hover, :focus) {
 @media screen and (min-width: 45em) {
   .form form {
     --flow-space: 4rem;
-    justify-self: end;
   }
 }
 .form .form-group {

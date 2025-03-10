@@ -9,7 +9,6 @@
     form {
         @include mq(medium) {
             --flow-space: #{$form-form-flow-space};
-            justify-self: $form-button-justification;
         }
     }
 
