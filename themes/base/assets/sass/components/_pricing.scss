@@ -1,0 +1,24 @@
+@use "../abstracts" as *;
+
+.pricing {
+    --flow-space: #{$pricing-flow-space-small-screen};
+
+    text-align: $pricing-text-alignement;
+    background-color: $pricing-background-color;
+    color: $pricing-text-color;
+    font-weight: $pricing-font-weight;
+    font-size: $pricing-font-size;
+
+    @include mq(medium) {
+        --flow-space: #{$pricing-flow-space-medium-screen};
+    }
+
+    ul {
+        list-style: none;
+    }
+
+    li {
+        display: grid;
+        gap: $pricing-card-gap;
+    }
+}

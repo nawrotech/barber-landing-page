@@ -1,0 +1,8 @@
+@use "../abstracts" as *;
+
+.services { 
+    --flow-space: #{$services-flow-space};
+    background-color: $services-background-color;
+    text-align: $services-alignement;
+
+}

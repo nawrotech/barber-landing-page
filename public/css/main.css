@@ -85,7 +85,7 @@ body {
   font-family: "Source Sans 3", sans-serif;
   font-weight: 400;
   font-size: var(--fs-400);
-  color: var(--neutral-100);
+  color: var(--primary-700);
   background-color: var(--primary-100);
   line-height: 1.5;
 }
@@ -98,7 +98,7 @@ a:is(:hover, :focus) {
 }
 
 .button {
-  display: inline-flex;
+  display: inline-block;
   cursor: pointer;
   text-decoration: none;
   line-height: 1;
@@ -135,14 +135,14 @@ a:is(:hover, :focus) {
   padding: 2rem;
   background-color: var(--primary-100);
   font-family: "Source Sans 3", sans-serif;
-  color: var(--primary-100);
+  color: var(--primary-700);
   line-height: 1.25;
   border-radius: 1rem;
   box-shadow: 0 0.25rem 1rem rgba(0, 0, 0, 0.05);
 }
 .card__heading {
   font-size: var(--fs-600);
-  color: var(--primary-100);
+  color: var(--primary-700);
   font-family: "Alegreya SC", serif;
   text-transform: uppercase;
   letter-spacing: 0.16em;
@@ -164,7 +164,7 @@ a:is(:hover, :focus) {
 
 .heading-1 {
   font-size: var(--fs-900);
-  color: var(--accent-400);
+  color: var(--accent-300);
   font-family: "Alegreya SC", serif;
   text-transform: uppercase;
   letter-spacing: 0.16em;
@@ -218,7 +218,7 @@ a:is(:hover, :focus) {
 .nav a {
   color: var(--neutral-100);
   font-family: "Alegreya SC", serif;
-  font-size: var(--fs-600);
+  font-size: var(--fs-500);
   font-weight: 700;
   letter-spacing: 0.16em;
   text-decoration: none;
@@ -239,7 +239,7 @@ a:is(:hover, :focus) {
   --flow-space: 2rem;
   text-align: center;
   font-size: var(--fs-500);
-  color: var(--primary-800);
+  color: var(--primary-700);
 }
 @media screen and (min-width: 65em) {
   .hero {
@@ -282,6 +282,99 @@ a:is(:hover, :focus) {
   box-shadow: 0 0.25rem 1rem rgba(0, 0, 0, 0.15);
 }
 
+.services {
+  --flow-space: 3rem;
+  background-color: var(--primary-200);
+  text-align: center;
+}
+
+.hours {
+  --flow-space: 1.5rem;
+  text-align: center;
+  background-color: var(--primary-100);
+  color: var(--primary-700);
+}
+.hours h2 {
+  line-height: 1;
+}
+.hours p {
+  max-inline-size: 60ch;
+  margin-inline: auto;
+}
+.hours ul {
+  --flow-space: 4rem;
+  list-style: none;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  row-gap: 2rem;
+}
+@media screen and (min-width: 65em) {
+  .hours ul {
+    justify-content: space-between;
+  }
+}
+.hours li {
+  padding-inline: 1.5rem;
+  display: grid;
+  gap: 0.25rem;
+}
+
+.pricing {
+  --flow-space: 2.5rem;
+  text-align: center;
+  background-color: var(--primary-200);
+  color: var(--primary-700);
+  font-weight: 700;
+  font-size: var(--fs-500);
+}
+@media screen and (min-width: 45em) {
+  .pricing {
+    --flow-space: 5rem;
+  }
+}
+.pricing ul {
+  list-style: none;
+}
+.pricing li {
+  display: grid;
+  gap: 0.5rem;
+}
+
+.form {
+  --flow-space: 1.5rem;
+  text-align: center;
+  font-size: var(--fs-400);
+}
+@media screen and (min-width: 45em) {
+  .form form {
+    --flow-space: 4rem;
+  }
+}
+.form .form-group {
+  display: grid;
+  gap: 0.25rem;
+}
+.form label {
+  font-size: var(--fs-400);
+  font-weight: 700;
+  color: var(--primary-700);
+  text-align: left;
+}
+.form input {
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  border: 3px solid var(--primary-200);
+}
+.form button {
+  grid-column: 1/-1;
+}
+@media screen and (min-width: 30em) {
+  .form button {
+    justify-self: end;
+  }
+}
+
 .flow > * + * {
   margin-block-start: var(--flow-space, 1rem);
 }
@@ -290,6 +383,12 @@ a:is(:hover, :focus) {
   display: flex;
   flex-wrap: wrap;
   gap: var(--cluster-space, 1rem);
+}
+
+.grid-auto-fit {
+  display: grid;
+  gap: var(--grid-gap, 1.5rem);
+  grid-template-columns: repeat(auto-fit, minmax(min(var(--min-inline-size, 250px), 100%), 1fr));
 }
 
 .fs-900 {

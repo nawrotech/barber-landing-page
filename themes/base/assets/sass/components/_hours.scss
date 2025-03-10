@@ -1,0 +1,37 @@
+@use "../abstracts" as *;
+
+.hours {
+    --flow-space: #{$hours-heading-bottom-spacing};
+    text-align: center;
+    background-color: $body-background-color;
+    color: $hours-font-color;
+   
+    h2 {
+        line-height: 1;
+    }
+
+    p {
+        max-inline-size: 60ch;
+        margin-inline: auto;
+    }
+
+    ul {
+        --flow-space: #{$hours-subheading-bottom-spacing};
+        list-style: none;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        row-gap: 2rem;
+
+        @include mq(large) {
+            justify-content: space-between;
+        }
+    }
+
+    li {
+        padding-inline: 1.5rem;
+        display: grid;
+        gap: $hours-scheduled-day-spacing;
+    }
+
+}

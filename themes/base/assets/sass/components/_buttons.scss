@@ -1,7 +1,7 @@
 @use "../abstracts/tokens" as *;
 
 .button {
-  display: inline-flex;
+  display: inline-block;
   cursor: pointer;
   text-decoration: none;
   line-height: 1;
